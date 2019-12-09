@@ -1,0 +1,64 @@
+<div id="toast"><tj:toast></tj:toast></div>
+<button id="btnDemo" type="button" class="btn" ng-click="toastDemo()">Run Demo</button>
+<a href="#/custom" class="btn">Custom Toast</a>
+
+<p>Add a success message with the default settings.</p>
+<div class="gt mar-b10">
+  <div class="gc">
+    <label for="level" class="pad-r10">Level</label>
+    <select name="level" ng-model="level">
+      <option value="success">success</option>
+      <option value="error">error</option>
+      <option value="warning">warning</option>
+    </select>
+  </div>
+  <div class="gc" style="width: 75%;">
+    <input type="text" name="text" placeholder="Toast text..." ng-model="text" />
+  </div>
+</div>
+
+<div class="demo">
+  <button id="btnDemo1" type="button" class="btn pre-demo" ng-click="demo1()">demo</button>
+  <pre><code>
+  tjToast.enqueue({
+    level: '{{level}}',
+    text: '{{text}}'
+  });
+  </code></pre>
+</div>
+
+<p>Add an error message that cannot be dismissed for 8 seconds using a
+  custom "3D Cube" animation with an extra transition delay before the next toast.</p>
+<div class="demo">
+  <button id="btnDemo2" type="button" class="btn pre-demo" ng-click="demo2()">demo</button>
+  <pre><code>
+  tjToast.enqueue({
+    level: 'error',
+    text: 'Error: You cannot dismiss this!',
+    xclass: 'tjToast-3dc',
+    nodis: true,
+    delay: 8000,
+    tdelay: 2000
+  });
+  </code></pre>
+</div>
+
+<p>Add a warning message that uses a custom "3D Rotate" animation and
+  lasts 3 seconds instead of the default 5 seconds.</p>
+<div class="demo">
+  <button id="btnDemo3" type="button" class="btn pre-demo" ng-click="demo3()">demo</button>
+  <pre><code>
+  tjToast.enqueue({
+    level: 'warning',
+    text: 'This is your last warning!',
+    delay: 3000,
+    xclass: 'tjToast-3dr'
+  });
+  </code></pre>
+</div>
+
+<p>Must deliberately start cycling through and displaying toasts.</p>
+<pre><code>
+  tjToast.now();
+  
+</pre></code>

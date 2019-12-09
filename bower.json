@@ -1,0 +1,32 @@
+{
+  "name": "angular-tj-toast",
+  "version": "0.1.1",
+  "authors": [
+    "Taylor Brink <taylor@nanobasis.com>"
+  ],
+  "description": "Toast aka Flash Message support for AngularJS",
+  "main": ["dist/angular-tj-toast.min.js", "dist/angular-tj-toast.min.css"],
+  "keywords": [ "angular", "toast", "flash", "message" ],
+  "license": "MIT",
+  "homepage": "https://github.com/brinkt/angular-tj-toast",
+  "readmeFilename": "README.md",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "demo",
+    "test",
+    "gulpfile.js",
+    "karma.conf.js",
+    "package.json",
+    "README.md"
+  ],
+  "dependencies": {
+    "angular": "~1.4.7"
+  },
+  "devDependencies": {
+    "angular-route": "~1.4.7",
+    "angular-animate": "~1.4.7",
+    "angular-mocks": "~1.4.7"
+  }
+}

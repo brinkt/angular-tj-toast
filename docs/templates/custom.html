@@ -1,0 +1,42 @@
+<p class="mar-t20">This toast will be displayed after the view redirects to the previous page.</p>
+
+<div class="gt mar-b10">
+  <div class="gc">
+    <label for="level" class="pad-r10">Level</label>
+    <select name="level" ng-model="level">
+      <option value="success">success</option>
+      <option value="error">error</option>
+      <option value="warning">warning</option>
+    </select>
+  </div>
+  <div class="gc" style="width: 60%;">
+    <input type="text" name="text" placeholder="Toast text..." ng-model="text" />
+  </div>
+  <div class="gcrb">
+    <div class="pad-l10">
+      <button id="btnCustomDemo" type="button" class="btn" ng-click="customDemo()">Submit</button>
+    </div>
+  </div>
+</div>
+
+<p class="mar-t20">Automatically display toasts on specific route (requires ngRoute):</p>
+<pre><code>
+  app.controller('ToastController',
+    ['$scope','$location','tjToast',
+    function($scope, $location, tjToast) {
+    
+    // listen for path changes; if path=/, run toasts
+    $scope.$on('$routeChangeSuccess', function(){
+      var path = $location.path();
+      if( path == '/' ){
+        tjToast.now();
+      }
+    });
+    
+  }]);
+  
+</pre></code>
+
+<div class="mar-t20">
+  <a href="#/" class="btn">Go Back</a>
+</div>

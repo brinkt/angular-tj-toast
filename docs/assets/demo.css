@@ -1,0 +1,188 @@
+/* ============================================================
+  RESET
+============================================================ */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  background: transparent;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+body { line-height: 1; }
+ol, ul { list-style: none; }
+a img { border: none; }
+del { text-decoration: line-through; }
+
+blockquote { quotes: none; }
+blockquote:before, blockquote:after {
+  content: '';
+  content: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  clear: both;
+  font-weight: normal;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* ============================================================
+  GLOBALS
+============================================================ */
+
+@import url(http://fonts.googleapis.com/css?family=Bitter:400,700);
+
+html { 
+  height: 100%;
+  overflow: -moz-scrollbars-vertical;
+  overflow-y: scroll;
+}
+
+a, a:active, a:visited, a:hover {
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  color: rgba(255,255,255,0.9);
+  background: url('stressed_linen.png') repeat;
+  font-family: 'Bitter', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+pre {
+  background: rgba(255,255,255,0.4);
+  color: rgba(0,0,0,0.8);
+  font-size: 14px;
+}
+
+p { margin: 20px 0 10px 0; }
+h1 { margin: 0 0 20px 0; }
+h2 { margin-bottom: 0; }
+
+#container {
+  min-height: 100%;
+  background: rgba(255,255,255,0.1);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#main {
+  position: relative;
+  padding: 20px;
+}
+
+#toast {
+  position: absolute;
+  right: 40px;
+  top: 50px;
+}
+
+.gt { display: table; width: 100%; }
+.gc { display: table-cell; }
+.gcrb { display: table-cell; width: 50px; }
+
+.mar-t20 { margin-top: 20px; }
+.mar-b10 { margin-bottom: 10px; }
+.pad-r10 { padding-right: 10px; }
+.pad-l10 { padding-left: 10px; }
+
+.demo { position: relative; }
+.pre-demo {position: absolute; top: 10px; right: 10px; }
+
+select {
+  padding: 3px;
+  margin: 0;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
+  -moz-box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
+  box-shadow: 0 3px 0 #ccc, 0 -1px #fff inset;
+  background: rgba(255,255,255,0.9);
+  color: rgba(0,0,0,0.8);
+  border:none;
+  outline:none;
+  display: inline-block;
+  -webkit-appearance:none;
+  -moz-appearance:none;
+  appearance:none;
+  cursor:pointer;
+}
+
+input[type="text"] {
+  width: 90%;
+  border: none;
+  outline: none;
+  padding: 5px 10px 5px 10px;
+  -webkit-border-radius: 5;
+  -moz-border-radius: 5;
+  border-radius: 5px;
+  border: solid 2px #c9c9c9;
+  -webkit-transition: border 0.3s;
+  -moz-transition: border 0.3s;
+  -o-transition: border 0.3s;
+  transition: border 0.3s;
+}
+input[type="text"]:focus, input[type="text"].focus {
+  border: solid 2px #3498db;
+}
+
+.btn {
+  font-size: 13px;
+  -webkit-appearance: none;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  background: #3498db;
+  background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+  background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+  background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+  background-image: -o-linear-gradient(top, #3498db, #2980b9);
+  background-image: linear-gradient(to bottom, #3498db, #2980b9);
+  -webkit-border-radius: 5;
+  -moz-border-radius: 5;
+  border-radius: 5px;
+  color: #ffffff;
+  padding: 8px 12px 8px 12px;
+  text-decoration: none;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2),
+              0px 1px 1px 0px rgba(0, 0, 0, 0.14),
+              0px 2px 1px -1px rgba(0, 0, 0, 0.12);
+}
+
+.btn:hover {
+  background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
+}
+
+/* Mobile ONLY */
+@media (max-width: 48em) {
+  #toast {
+    top: 55px;
+  }
+  
+  
+}
+

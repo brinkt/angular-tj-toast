@@ -1,0 +1,40 @@
+{
+  "name": "angular-tj-toast",
+  "version": "0.1.1",
+  "description": "Toast aka Flash Message support for AngularJS",
+  "main": ["dist/angular-tj-toast.min.js", "dist/angular-tj-toast.min.css"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brinkt/angular-tj-toast.git"
+  },
+  "keywords": [
+    "angular",
+    "toast",
+    "flash",
+    "message"
+  ],
+  "author": "Taylor Brink <taylor@nanobasis.com>",
+  "readmeFilename": "README.md",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.9.11",
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-jshint": "^1.11.2",
+    "gulp-minify-css": "^1.2.1",
+    "gulp-minify-html": "^1.0.4",
+    "gulp-ng-html2js": "^0.2.0",
+    "gulp-protractor": "^1.0.0",
+    "gulp-uglify": "^1.4.2",
+    "jasmine-core": "^2.3.4",
+    "jshint-stylish": "^2.0.1",
+    "karma": "^0.13.10",
+    "karma-chrome-launcher": "^0.2.1",
+    "karma-firefox-launcher": "^0.1.6",
+    "karma-jasmine": "^0.3.6",
+    "protractor": "^2.5.0"
+  },
+  "scripts": {
+    "test": "gulp test"
+  }
+}

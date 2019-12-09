@@ -1,0 +1,75 @@
+/* tjToast main */
+
+.tjToast {
+  z-index: 99;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.2),
+              0px 3px 4px 0px rgba(0, 0, 0, 0.14),
+              0px 3px 3px -2px rgba(0, 0, 0, 0.12);
+}
+.tjToast span { display: inline-block; }
+
+/* tjToast levels */
+
+.tjToast-success {
+  color: #F1F8E9;
+  background-color: #558B2F;
+}
+.tjToast-warning {
+  color: #FFF8E1;
+  background-color: #FF8F00;
+}
+.tjToast-error {
+  color: #FFEBEE;
+  background-color: #D32F2F;
+}
+
+/* tjToast dismiss button */
+
+button.tjToast-dismiss {
+  margin-left: 15px;
+  -webkit-appearance: none;
+  padding: 0;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  outline: 0;
+  font-weight: bold;
+  color: rgba(255,255,255, 0.7);
+}
+button.tjToast-dismiss:hover,
+button.tjToast-dismiss:focus {
+  color: rgba(255,255,255, 0.9);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* tjToast animate: default */
+
+.tjToast.ng-enter, 
+.tjToast.ng-leave { 
+  -webkit-transition: -webkit-transform 0.6s cubic-bezier(0.25, 0, 0.25, 1), opacity 0.6s cubic-bezier(0.25, 0, 0.25, 1);
+  -moz-transition: -moz-transform 0.6s cubic-bezier(0.25, 0, 0.25, 1), opacity 0.6s cubic-bezier(0.25, 0, 0.25, 1);
+  -o-transition: -o-transform 0.6s cubic-bezier(0.25, 0, 0.25, 1), opacity 0.6s cubic-bezier(0.25, 0, 0.25, 1);
+  transition: transform 0.6s cubic-bezier(0.25, 0, 0.25, 1), opacity 0.6s cubic-bezier(0.25, 0, 0.25, 1);
+} 
+
+.tjToast.ng-leave.ng-leave-active,
+.tjToast.ng-enter {
+  opacity: 0;
+  -webkit-transform: translate3d(0px, -100px, 0px);
+  transform: translate3d(0px, -100px, 0px);
+  display: block !important;
+}        
+
+.tjToast.ng-enter.ng-enter-active,
+.tjToast.ng-leave {
+  opacity: 1;
+  display: block !important;
+  -webkit-transform: translate3d(0px, 0px, 0px);
+  transform: translate3d(0px, 0px, 0px);
+}
+
+
+
